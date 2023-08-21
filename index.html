@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Sale</title>
+    <link rel="shortcut icon" href="images/Summer 1.png" type="image/x-icon">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Work+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind & DAISY UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .workSans {
+            font-family: 'Fira Code', monospace;
+
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .sticky-section {
+            position: sticky;
+            top: 6px;
+            /* Adjust this value as needed */
+            z-index: 1;
+            /* To ensure it appears above other content */
+        }
+    </style>
+</head>
+
+<body class="workSans">
+
+    <!-- ----------------------HERO SECTION START ----------------------- -->
+    <header class="bg-[#F9F6E2] container mx-auto ">
+        <div class="flex flex-col-reverse md:flex-row lg:flex-row items-center justify-around py-8 h-full lg:h-[90vh]">
+            <div class="space-y-5 text-center lg:text-left mt-3 lg:mt-0">
+                <h3 class="text-[24px] font-medium">---SALE FEVER---</h3>
+                <h1 class="font-bold text-[#111111] text-3xl lg:text-5xl ">Purchase TK 200 or <br> above & get <span
+                        class="text-[#E527B2]">20% off</span></h1>
+                <p class="text-[#111111] font-medium text-[20px] pt-5">Use Promo Code <span
+                        class="rounded-md py-2 px-5 text-white bg-[#E527B2] font-bold">SELL200</span></p>
+            </div>
+            <div>
+                <img class="w-[310px] lg:w-[450px]" src="images/Summer 1.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <!-- ----------------------HERO SECTION END ----------------------- -->
+
+    <!-- --------------------CARD ITEMS SECTION------------------------ -->
+
+    <main class=" bg-[#F8F8F8] px-16 lg:px-24 py-12 lg:py-16">
+
+        <section class="flex flex-col lg:flex-row gap-6 ">
+            <section>
+                <!-- --------------------card list one---------------------- -->
+                <div>
+                    <h1 class="text-2xl font-bold mb-6 lg:mb-4 text-center lg:text-left">Kitchenware</h1>
+                    <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
+
+                        <!-- card one -->
+
+                        <div onclick="mainCardClick(this)"
+                            class="card w-[300px] h-[320px] card-compact bg-base-100 shadow-md">
+                            <div class="mt-4 mx-auto">
+                                <div class="bg-[#f3f3f3] px-[78px] py-5 rounded-md">
+                                    <img class="mx-auto" src="/images/prod1.png" alt="Shoes" />
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="flex text-[#FFC107] justify-center gap-2">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <h2 id="itemName" class="text-center font-semibold text-[20px]">K. Accessories</h2>
+                                    <p class="text-[18px] font-medium text-[#b59b9b]"><span id="itemPrice">39.00</span>
+                                        TK</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- card-two -->
+                        <div onclick="mainCardClick(this)" class="card  card-compact  bg-base-100 shadow-md">
+                            <div class="mt-4 mx-auto">
+                                <div class="bg-[#f3f3f3] px-14 py-5 rounded-md">
+                                    <img class="mx-auto" src="/images/prod2.png" alt="Shoes" />
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="flex text-[#FFC107] justify-center gap-2">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <h2 id="itemName" class="text-center font-semibold text-[20px]">K. Accessories</h2>
+                                    <p class="text-[18px] font-medium text-[#b59b9b]"><span id="itemPrice">25.00</span>
+                                        TK</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card three -->
+                        <div onclick="mainCardClick(this)" class="card  card-compact  bg-base-100 shadow-md">
+                            <div class="mt-4 mx-auto">
+                                <div class="bg-[#f3f3f3] px-14 py-5 rounded-md">
+                                    <img class="mx-auto" w-[300px] h-[250px] src="/images/prod3.png" alt="Shoes" />
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="flex text-[#FFC107] justify-center gap-2">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <h2 id="itemName" class="text-center font-semibold text-[20px]">Home Cooker</h2>
+                                    <p class="text-[18px] font-medium text-[#b59b9b]"><span id="itemPrice">49.00</span>
+                                        TK</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- --------------------card list two ------------------->
+                <div>
+                    <h1 class="text-2xl font-bold mb-6 lg:mb-4 text-center lg:text-left">Sportswear</h1>
+                    <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                        <!-- card one -->
+
+                        <div onclick="mainCardClick(this)" class="card  card-compact  bg-base-100 shadow-md">
+                            <div class="mt-4 mx-auto">
+                                <div class="bg-[#f3f3f3] px-12 py-5 rounded-md">
+                                    <img class="mx-auto" src="/images/prod4.png" alt="Shoes" />
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="flex text-[#FFC107] justify-center gap-2">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <h2 class="text-center font-semibold text-[20px]">Sports Back Cap</h2>
+                                    <p id="itemPrice" class="text-[18px] font-medium text-[#b59b9b]"><span
+                                            id="itemPrice">49.00</span> TK</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card-two -->
+                        <div onclick="mainCardClick(this)" class="card  card-compact  bg-base-100 shadow-md">
+                            <div class="mt-4 mx-auto">
+                                <div class="bg-[#f3f3f3] px-16 py-5 rounded-md">
+                                    <img class="mx-auto" src="/images/prod5.png" alt="Shoes" />
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="flex text-[#FFC107] justify-center gap-2">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <h2 class="text-center font-semibold text-[20px]">Full Jersey Set</h2>
+                                    <p id="itemPrice" class="text-[18px] font-medium text-[#b59b9b]"><span
+                                            id="itemPrice">69.00</span> TK</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card three -->
+                        <div onclick="mainCardClick(this)" class="card   card-compact  bg-base-100 shadow-md">
+                            <div class="mt-4 mx-auto">
+                                <div class="bg-[#f3f3f3] px-14 py-5 rounded-md">
+                                    <img class="mx-auto" w-[300px] h-[250px] src="/images/prod6.png" alt="Shoes" />
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="flex text-[#FFC107] justify-center gap-2">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <h2 class="text-center font-semibold text-[20px]">Sports cates</h2>
+                                    <p id="itemPrice" class="text-[18px] font-medium text-[#b59b9b]"><span
+                                            id="itemPrice">159.00</span> TK</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- ------------------card list three------------------------- -->
+                <div>
+                    <h1 class="text-2xl font-bold mb-6 lg:mb-4 text-center lg:text-left pt-4">Furniture</h1>
+                    <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                        <!-- card one -->
+
+                        <div onclick="mainCardClick(this)" class="card card-compact  bg-base-100 shadow-md">
+                            <div class="mt-4 mx-auto">
+                                <div class="bg-[#f3f3f3] px-14 py-5 rounded-md">
+                                    <img class="mx-auto" src="/images/prod7.png" alt="Shoes" />
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="flex text-[#FFC107] justify-center gap-2">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <h2 class="text-center font-semibold text-[20px]" id="itemNames">Single Relax Chair
+                                    </h2>
+                                    <p id="itemPrice" class="text-[18px] font-medium text-[#b59b9b]"><span
+                                            id="itemPrice">185.00</span> TK</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card-two -->
+                        <div onclick="mainCardClick(this)" class="card  card-compact  bg-base-100 shadow-md">
+                            <div class="mt-4 mx-auto">
+                                <div class="bg-[#f3f3f3] px-16 py-5 rounded-md">
+                                    <img class="mx-auto" src="/images/prod8.png" alt="Shoes" />
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="flex text-[#FFC107] justify-center gap-2">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <h2 class="text-center font-semibold text-[20px]">Children play</h2>
+                                    <p id="itemPrice" class="text-[18px] font-medium text-[#b59b9b]"><span
+                                            id="itemPrice">299.00</span> TK</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card three -->
+                        <div onclick="mainCardClick(this)" class="card  card-compact  bg-base-100 shadow-md">
+                            <div class="mt-4 mx-auto">
+                                <div class="bg-[#f3f3f3] px-12 py-5 rounded-md">
+                                    <img class="mx-auto" w-[300px] h-[250px] src="/images/prod9.png" alt="Shoes" />
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="flex text-[#FFC107] justify-center gap-2">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+
+                                    </div>
+                                    <h2 class="text-center font-semibold text-[20px]">Flexible Sofa</h2>
+                                    <p id="itemPrice" class="text-[18px] font-medium text-[#b59b9b]"><span
+                                            id="itemPrice">339.00</span> TK</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </section>
+
+
+
+            <!-- ------------------------PURCHASE ITEM CARD --------------------------->
+
+            <section class="mt-14 ">
+                <div class="sticky-section">
+                    <div class="bg-white py-8 px-3 rounded-md">
+
+                        <h1 class="mb-2 text-[#111] text-[18px] font-semibold">Have coupon?</h1>
+                        <input id="coupon-field" class="py-2 px-3 border-2 border-[#11111126] rounded-" type="text"
+                            placeholder="Coupon code">
+
+                        <button id="applyBtn" type="button"
+                            class="bg-[#E527B2] text-white px-3 py-[10px] mr-2 relative right-[6px] border-r-0 font-semibold opacity-50 hover:cursor-not-allowed"
+                            disabled>Apply</button>
+
+                    </div>
+
+                    <div class="bg-white py-7 px-3 rounded-md mt-4">
+                        <div id="itemNameText">
+                            <ol id="orderList" class="list-decimal">
+
+                            </ol>
+                        </div>
+
+                        <h3 class="border-t-2 pt-2 text-[20px] font-medium mb-1">Total Price : <span id="totalPrice"
+                                class="text-[#b59b9b]">00.00 </span> TK</h3>
+
+                        <h3 class="text-[20px] font-medium mb-1">Discount : <span id="discountAmount"
+                                class="text-[#b59b9b]">00.00
+                               </span> TK
+                        </h3>
+                        <h3 class="text-[20px] font-medium border-b-2 pb-3">Total : <span id="totalAmount"
+                                class="text-[#b59b9b]"> 00.00
+
+                            </span> TK</h3>
+
+                        <button id="purchase-btn" onclick="my_modal_1.showModal()"
+                            class="= bg-[#E527B2] text-white w-full mt-4 rounded-md px-3 py-[10px] font-semibold opacity-50 hover:cursor-not-allowed"
+                            disabled>Make
+                            Purchase</button>
+
+                        <!-- Open the modal using ID.showModal() method -->
+
+                        <dialog id="my_modal_1" class="modal">
+                            <form method="dialog" class="modal-box text-center">
+                                <img class="mx-auto" src="images/congo.png" alt="">
+                                <h3 class="font-bold text-lg">Congratulations!</h3>
+                                <p class="py-4">Your Purchase the product</p>
+                                <div class="modal-action flex justify-center">
+                                    <button id="goHomeBtn"
+                                        class="bg-[#E527B2] text-white px-4 py-[10px] rounded-md  mr-2">Go Home</button>
+                                </div>
+                            </form>
+                        </dialog>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </section>
+
+
+    </main>
+
+    <!-- --------------------CARD ITEMS SECTION END------------------------ -->
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
